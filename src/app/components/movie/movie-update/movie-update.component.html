@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 card card-body bg-light mb-2 mt-2">
+        <div class="row">
+            <div class="col-md-3">
+              <label for="name" class="control-label">Name:</label>
+            </div>
+            <div class="col-md-7">
+              <span name="name">
+                {{movie?.name}}
+              </span>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-3">
+              <label for="dateOfBirth" class="control-label">Genre:</label>
+            </div>
+            <div class="col-md-7">
+              <span name="dateOfBirth">
+               {{movie?.genre}}
+              </span>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-3">
+              <label for="address" class="control-label">Rating:</label>
+            </div>
+            <div class="col-md-7">
+              <span name="address">
+                {{movie?.rating}}
+              </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <label for="address" class="control-label">Views:</label>
+            </div>
+            <div class="col-md-7">
+              <span name="address">
+                {{movie?.views}}
+              </span>
+            </div>
+          </div>
+      </div>
+    </div>
+    <br>
+    <input placeholder="Enter Your new Rating" #newRating (keyup.enter)="addRating(newRating.value)"
+        (blur)="addRating(newRating.value); newRating.value='' ">
+    <div class="form-group row">
+        <div class="offset-5 col-md-1">
+            <button type="submit" class="btn btn-warning" (click)="updateMovie()">Rate</button>
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-danger" (click)="redirectToMovieList()">Cancel</button>
+        </div>
+    </div>
+  </div>

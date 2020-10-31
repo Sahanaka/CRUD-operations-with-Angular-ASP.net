@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <br><br>
+    <form  [formGroup] = "tvseriesForm" autocomplete="off" novalidate (ngSubmit)="addTvseries()">
+      <div class="form-horizontal card card-body bg-light mb-2 mt-2">
+   
+        <div class="form-group row">
+          <label for="name" class="control-label col-md-2">Name of the Tvseries: </label>
+          <div class="col-md-5">
+            <input type="text" formControlName="name" id="name" class="form-control" />
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+   
+        <div class="form-group row">
+          <label for="genre" class="control-label col-md-2">Genre: </label>
+          <div class="col-md-5">
+            <input type="text" formControlName="genre" id="genre" class="form-control" />
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="rating" class="control-label col-md-2">Rating: </label>
+            <div class="col-md-5">
+              <input type="number" formControlName="rating" id="rating" class="form-control" />
+            </div>
+            <div class="col-md-5">
+            </div>
+          </div>
+   
+        <br><br>
+   
+        <div class="form-group row">
+            <div class="offset-5 col-md-1">
+                <button type="submit" class="btn btn-success" >Save</button>
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-danger" (click)="redirectToTvseriesList()">Cancel</button>
+            </div>
+        </div>
+       
+      </div> 
+    </form>
+   
+    <!-- <app-success-modal [modalHeaderText]="'Success message'" 
+    [modalBodyText]="'Action completed successfully'" [okButtonText]="'OK'" 
+    (redirectOnOK)="redirectToOwnerList()"></app-success-modal>
+   
+    <app-error-modal [modalHeaderText]="'Error message'" 
+    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal> -->
+   
+  </div>
+

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <br><br>
+    <form  [formGroup] = "signinForm" autocomplete="off" novalidate (ngSubmit)="signIn()">
+      <div class="form-horizontal card card-body bg-light mb-2 mt-2">
+   
+        <div class="form-group row">
+          <label for="name" class="control-label col-md-2">Email: </label>
+          <div class="col-md-5">
+            <input type="email" formControlName="email" id="email" class="form-control" />
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+   
+        <div class="form-group row">
+          <label for="genre" class="control-label col-md-2">Password: </label>
+          <div class="col-md-5">
+            <input type="password" formControlName="password" id="password" class="form-control" />
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+   
+        <br><br>
+   
+        <div class="form-group row">
+            <div class="offset-5 col-md-1">
+                <button type="submit" class="btn btn-success" >Signin</button>
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-outline-info" (click)="redirectToSignUp()">Signup</button>
+                <a></a>
+            </div>
+        </div>
+       
+      </div> 
+    </form>
+   
+    <!-- <app-success-modal [modalHeaderText]="'Success message'" 
+    [modalBodyText]="'Action completed successfully'" [okButtonText]="'OK'" 
+    (redirectOnOK)="redirectToOwnerList()"></app-success-modal>
+   
+    <app-error-modal [modalHeaderText]="'Error message'" 
+    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal> -->
+   
+  </div>
+

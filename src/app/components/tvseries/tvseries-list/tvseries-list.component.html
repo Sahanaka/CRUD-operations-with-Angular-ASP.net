@@ -1,0 +1,36 @@
+<div class="row"> 
+    <div class="offset-10 col-md-2">
+      <br><br>
+      <a [routerLink]="['/tvseries/add']" class="btn btn-info" role="button">Add TvSeries</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Views</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tvseries of tvseries">
+              <td>{{tvseries.name}}</td>
+              <td>{{tvseries.genre}}</td>
+              <td>{{tvseries.views}}</td>
+              <td>{{tvseries.rating}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)="redirectToUpdatePage(tvseries.id)">Update</button></td>
+              <td><button type="button" id="delete" class="btn btn-danger" (click)="redirectToDeletePage(tvseries.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br><br><br>
+    <a [routerLink]="['/home']" class="btn btn-outline-danger" role="button" style="-moz-tab-size: 1; tab-size: 1;">Back</a>
+  </div>
+

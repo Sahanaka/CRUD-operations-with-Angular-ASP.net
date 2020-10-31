@@ -1,0 +1,35 @@
+<div class="row"> 
+    <div class="offset-10 col-md-2">
+      <br><br>
+      <a [routerLink]="['/movie/add']" class="btn btn-info" role="button">Add Movie</a>
+      
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Views</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies">
+              <td>{{movie.name}}</td>
+              <td>{{movie.genre}}</td>
+              <td>{{movie.views}}</td>
+              <td>{{movie.rating}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)="redirectToUpdatePage(movie.id)">Update</button></td>
+              <td><button type="button" id="delete" class="btn btn-danger" (click)="redirectToDeletePage(movie.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a [routerLink]="['/home']" class="btn btn-outline-danger" role="button" style="-moz-tab-size: 1; tab-size: 1;">Back</a>
+  </div>

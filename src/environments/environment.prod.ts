@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlAddress: 'http://www.imdb.com'
 };
